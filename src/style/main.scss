@@ -263,22 +263,10 @@ $proxima_nova: ProximaNova, sans-serif;
     border-radius: 0;
     width: 195px;
     height: 50px;
-
     display: block;
     margin: 0 auto;
-
-    &:hover{
-      background-color: transparent;
-      border: 1px solid #ffffff;
-      font-style: italic;
-      font-size: 20px;
-      color: #ffffff;
-      border-radius: 0;
-    }
   }
 }
-
-
 
 //---------------              SECTION OUR TEAM            -----------
 .section_ourTeam{
@@ -305,7 +293,6 @@ $proxima_nova: ProximaNova, sans-serif;
     .nextButton {
       background: url("../img/right-arrow.png") center center no-repeat;
       background-size: cover;
-      //content: "";
       width: 40px;
       height: 40px;
       display: block;
@@ -347,8 +334,6 @@ $proxima_nova: ProximaNova, sans-serif;
   position: absolute;
   top: calc(-50% - -65px);
   left: calc(50% - 117px);
-
-
 }
 
 .obrien{
@@ -402,7 +387,6 @@ $proxima_nova: ProximaNova, sans-serif;
     color: #9f9acf;
     font-size: 20px;
     z-index: 3;
-
   }
 
   &:last-child{
@@ -414,12 +398,12 @@ $proxima_nova: ProximaNova, sans-serif;
 //---------------              SECTION OUR TEAM            -----------
 
 .container_map{
-  height: 900px;
+  height: 1000px;
 }
 .section_contact{
   position: relative;
   z-index: 1;
-
+  overflow: hidden;
 }
 
 .icon_contact{
@@ -428,7 +412,6 @@ $proxima_nova: ProximaNova, sans-serif;
   width: 42px;
   height: 60px;
   margin: 0 auto 25px auto;
-
 }
 
 .title_contact{
@@ -442,7 +425,7 @@ $proxima_nova: ProximaNova, sans-serif;
 .contact_container{
   position: absolute;
   top: 55px;
-  left: calc(50% - 570px);
+  left: calc(50% - 555px);
   width: 290px;
   z-index: 5;
 
@@ -457,7 +440,6 @@ $proxima_nova: ProximaNova, sans-serif;
     padding-left: 7px;
 
   }
-
 
   .formElement_input{
     height: 55px;
@@ -489,7 +471,6 @@ $proxima_nova: ProximaNova, sans-serif;
     outline: none;
     margin-bottom: 55px;
 
-
     &::placeholder{
       font-style: italic;
       font-size: 18px;
@@ -497,13 +478,16 @@ $proxima_nova: ProximaNova, sans-serif;
 
     }
   }
+
+  .contact_map-info{
+    width: 350px;
+  }
 }
 
 
 .contact_background{
   position: relative;
   background-color: rgba(159, 154, 207, 1);
-
 }
 #map{
   opacity: 0.5;
@@ -540,6 +524,73 @@ $proxima_nova: ProximaNova, sans-serif;
   border: none;
   border-radius: 4px;
   border-bottom: 4px solid #8783b0;
+  margin-bottom: 100px;
+}
+
+.contact_map-info {
+  position: absolute;
+  width: 350px;
+  top: 20%;
+  right: 0;
+
+  .address {
+    height: 95px;
+    margin-bottom: 3px;
+    display: flex;
+    flex-direction: row;
+    transform: translateX(266px);
+    transition: transform 1s;
+
+    &:hover{
+      transform: translateX(0);
+    }
+
+    .address_icon {
+      height: 95px;
+      width: 24%;
+      background: url("../img/icon-address.png") center no-repeat, #9f9acf;
+    }
+
+    .address_info {
+      height: 95px;
+      width: 76%;
+      background-color: #ebebeb;
+      opacity: .5;
+      padding: 13px 35px;
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+
+
+  .phone {
+    height: 95px;
+    margin-bottom: 3px;
+    display: flex;
+    flex-direction: row;
+    transform: translateX(266px);
+    transition: transform 1s;
+
+    &:hover{
+      transform: translateX(0);
+    }
+
+    .phone_icon {
+      height: 95px;
+      width: 24%;
+      background: url("../img/icon-mobile.png") center no-repeat, #9f9acf;
+    }
+
+    .phone_info {
+      height: 95px;
+      width: 76%;
+      background-color: #ebebeb;
+      opacity: .5;
+      padding: 13px 35px;
+      font-size: 18px;
+      text-align: center;
+    }
+  }
 }
 
 //---------------              FOOTER            -----------
@@ -588,11 +639,9 @@ $proxima_nova: ProximaNova, sans-serif;
 
   i {
     height: 20px;
-
     color: #9f9acf;
     font-size: 20px;
     z-index: 3;
-
   }
 
   &:last-child {
@@ -600,21 +649,18 @@ $proxima_nova: ProximaNova, sans-serif;
   }
 }
 
-
-
-
-
+//---------------              BUTTON BACK TO TOP           -----------
 #button {
   display: inline-block;
   background-color: #9f9acf;
-  width: 85px;
-  height: 85px;
-  line-height: 85px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
   text-align: center;
   border-radius: 4px;
   position: fixed;
-  bottom: 100px;
-  right: 130px;
+  bottom: 160px;
+  right: 100px;
   transition: background-color .3s,
   opacity .5s, visibility .5s;
   opacity: 0;
@@ -643,22 +689,6 @@ $proxima_nova: ProximaNova, sans-serif;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-// Малые девайсы («ландшафтные телефоны», >= 576px)
-@media (min-width: 576px) {
-
-}
-
 @media screen and (max-width: 768px){
   .section_about {
     .row {
@@ -668,58 +698,55 @@ $proxima_nova: ProximaNova, sans-serif;
     }
   }
 
-
   .section_services {
-    //.row {
-      .services_grid-container {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(5, 400px);
-        row-gap: 5px;
+    .services_grid-container {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(5, 400px);
+      row-gap: 5px;
 
-        .section_services-titleImage{
-          height: 100%;
-          grid-row-start: 1;
-          grid-row-end: 2;
-          grid-column-start: 1;
-          grid-column-end: 2;
-          p{
-            margin-bottom: 50px;
-          }
-        }
+      .section_services-titleImage {
+        height: 100%;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
 
-        .itemWeb{
-          grid-row-start: 2;
-          grid-row-end: 3;
-          grid-column-start: 1;
-          grid-column-end: 2;
+        p {
+          margin-bottom: 50px;
         }
-        .itemGraphic{
-          grid-row-start: 3;
-          grid-row-end: 4;
-          grid-column-start: 1;
-          grid-column-end: 2;
-        }
-        .itemSeo{
-          grid-row-start: 4;
-          grid-row-end: 5;
-          grid-column-start: 1;
-          grid-column-end: 2;
-        }
-        .itemMobile{
-          grid-row-start: 5;
-          grid-row-end: 6;
-          grid-column-start: 1;
-          grid-column-end: 2;
-        }
-
       }
-    //}
+
+      .itemWeb {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+
+      .itemGraphic {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+
+      .itemSeo {
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+
+      .itemMobile {
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+
+    }
+
   }
-}
-
-// Средние девайсы («таблетки», >= 768px)
-@media (min-width: 768px) {
-
 }
 
 @media screen and (max-width: 992px){
@@ -731,7 +758,6 @@ $proxima_nova: ProximaNova, sans-serif;
     }
   }
   .section_services {
-    //.row {
     .services_grid-container {
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(5, 400px);
@@ -774,15 +800,11 @@ $proxima_nova: ProximaNova, sans-serif;
       }
 
     }
-    //}
   }
-}
-// Большие девайсы (десктопы, >= 992px)
-@media (min-width: 992px) {
-
-}
-
-// Экстрабольшие девайсы (большие десктопы, >= 1200px)
-@media (min-width: 1200px) {
-
+  .contact_container {
+    left: calc(50% - 330px);
+    #formElement2_label, #formElement_label{
+      padding: 0;
+    }
+  }
 }
